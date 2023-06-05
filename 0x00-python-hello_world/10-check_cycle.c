@@ -15,10 +15,10 @@ int check_cycle(listint_t *list)
 	if (!list)
 		return (fail);
 
-	while (first_check && last_check && last_check->next)
+	while (first_check && last_check && last_check->next_node)
 	{
-		first_check = first_check->next;
-		last_check = last_check->next->next;
+		first_check = first_check->next_node;
+		last_check = last_check->next_node->next_node;
 		if (first_check == last_check)
 			return (success);
 	}
