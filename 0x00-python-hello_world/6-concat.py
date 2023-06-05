@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-first_phrase = "Holberton"
-second_phrase = "School"
-first_phrase += " " + second_phrase
-print("Welcome to {}!".format(first_phrase))
-
+str1 = "Holberton"
+str2 = "School"
+str1 += " " + str2
+print("Welcome to {}!".format(str1))
