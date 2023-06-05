@@ -1,27 +1,25 @@
 #include "lists.h"
-
 /**
- * check_cycle - checks if a linked list contains a cycle
- * @list: list to be analyzed
- * Return: 1 is success otherwise fail
+ * check_cycle - checks if there is a cycle or not
+ * @list: list linked to be analyzed
+ * Return: 1 if success , 0 otherwise
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *first_check = list;
-	listint_t *last_check = list;
-/*	int fail = 0, success = 1; */
+	listint_t *slow = list;
+	listint_t *fast = list;
 
 	if (!list)
-		return (1);
+		return (0);
 
-	while (first_check && last_check && last_check->next_node)
+	while (slow && fast && fast->next_node)
 	{
-		first_check = first_check->next_node;
-		last_check = last_check->next_node->next_node;
-		if (first_check == last_check)
-			return (0);
+		slow = slow->next_node;
+		fast = fast->next_node->next_node;
+		if (slow == fast)
+			return (1);
 	}
 
-	return (1);
+	return (0);
 }
 
