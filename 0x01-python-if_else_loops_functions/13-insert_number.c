@@ -1,33 +1,33 @@
 #include "lists.h"
 
 /**
- * insert_node - number to be inputted in sorted linked list
+ * insert_node - function that adds number into sorted linked list
  * @head: header pointer
- * @number: The number to be inputted
- * Return: Null will be returned if function fails
+ * @number: inputted number
+ * Return: funtion faills return null 
  */
 listint_t *insert_node(listint_t **head, int number)
 {
-	listint_t *node = *head, *node_check;
+	listint_t *node = *head, *new;
 
-	node_check = malloc(sizeof(listint_t));
-	if (node_check == NULL)
+	new = malloc(sizeof(listint_t));
+	if (new == NULL)
 		return (NULL);
-	node_check->num = number;
+	new->num = number;
 
 	if (node == NULL || node->num >= number)
 	{
-		node_check->next_node = node;
-		*head = node_check;
-		return (node_check);
+		new->next_node = node;
+		*head = new;
+		return (new);
 	}
 
 	while (node && node->next_node && node->next_node->num < number)
 		node = node->next_node;
 
-	node_check->next_node = node->next_node;
-	node->next_node = node_check;
+	new->next_node = node->next_node;
+	node->next_node = new;
 
-	return (node_check);
+	return (new);
 }
 
