@@ -2,17 +2,17 @@
 
 def magic_calculation(a, b):
     final = 0
-    three = 3
     one = 1
+    three = 3
     for initial in range(one, three):
         try:
             if initial > a:
                 raise Exception('Too far')
             else:
-                result += a ** b / initial
+                final += a ** b / initial
         except:
-            result = b + a
+            final = b + a
             break
-    return (result)
+    return (final)
 
 
