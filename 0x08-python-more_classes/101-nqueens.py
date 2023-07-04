@@ -24,8 +24,8 @@ def init_board(n):
     """Initialize an `n`x`n` sized chessboard with 0's."""
     board_game = []
     [board_game.append([]) for i in range(n)]
-    [row_board.append(' ') for i in range(n) for row_game in board_game]
-    return (board)
+    [row_game.append(' ') for i in range(n) for row_game in board_game]
+    return (board_game)
 
 
 def board_deepcopy(board):
