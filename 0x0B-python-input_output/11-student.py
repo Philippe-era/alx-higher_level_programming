@@ -38,4 +38,4 @@ class Student:
             json (dict): The key/value pairs to replace attributes with.
         """
         for initial, jump in json.items():
-            setattr(seilf, initial, jump)
+            setattr(self, initial, jump)
