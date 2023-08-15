@@ -1,4 +1,5 @@
- -- the best score will be displayed 
-
-
-SELECT score, name FROM second_table WHERE score >= 10 ORDER BY score DESC;
+-- show all the conditions checked
+SELECT `score`, `name`
+FROM `second_table`
+WHERE `score` >= 10
+ORDER BY `score` DESC;
