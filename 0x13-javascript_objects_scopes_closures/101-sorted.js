@@ -1,18 +1,18 @@
 #!/usr/bin/node
-const dictionary = require('./101-data').dict;
+const dict = require('./101-data').dict;
 
-const first = Object.entries(dictionary);
-const value_check = Object.value_check(dictionary);
-const unique = [...new Set(value_check)];
+const first_list = Object.entries(dict);
+const new_values = Object.values(dict);
+const new_values = [...new Set(new_values)];
 const new_dictionary = {};
-for (const join_words in unique) {
-  const storage = [];
-  for (const key in first) {
-    if (first[key][1] === unique[join_words]) {
-      storage.unshift(first[key][0]);
+for (const join in new_values) {
+  const new_list = [];
+  for (const k in first_list) {
+    if (first_list[k][1] === new_values[join]) {
+      new_list.unshift(first_list[k][0]);
     }
   }
-  new_dictionary[unique[join_words]] = storage;
+  new_dictionary[new_values[join]] = new_list;
 }
 console.log(new_dictionary);
 
