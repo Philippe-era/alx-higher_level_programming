@@ -1,16 +1,14 @@
 #!/usr/bin/python3
-"""list all states in the database."""
+"""Returns the information from the database."""
 import sys
 import MySQLdb
 
 if __name__ == "__main__":
-    # information from database will be received 
-    # connection to MYSQL database
-    database_connect = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], database_connect=sys.argv[3])
-    credentials = database_connect.cursor()
+    # connection to the database
+    database_create = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], database_create=sys.argv[3])
+    cursor_run = database_create.cursor()
 
-    #execution of the mysql query
-    credentials.execute("SELECT * FROM `states` ORDER BY `id`")
-    [print(state) for state in credentials.fetchall() if state[1][0] == "N"]
-
+    # execute the query in order
+    cursor_run.execute("SELECT * FROM `states` ORDER BY `id`")
+    [print(state) for state in c.fetchall() if state[1][0] == "N"]
 
