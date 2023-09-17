@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     session = Session()
 
-    my_query_execute = session.query(State).filter(State.name.like(inp[4])).all()
+    my_query_execute = session.query(State).filter(State.name.like(input_check[4])).all()
 
     if len(my_query_execute) == 0:
         print("Not found")
