@@ -6,7 +6,7 @@ import MySQLdb
 if __name__ == "__main__":
     # information from database will be received 
     # connection to MYSQL database
-    database_connect = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2],      database_connect=sys.argv[3])
+    database_connect = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], database_connect=sys.argv[3])
     credentials = database_connect.cursor()
 
     #execution of the mysql query
