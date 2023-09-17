@@ -1,11 +1,20 @@
 #!/usr/bin/python3
-"""State to be printed from database """
-""" model  state to be printed"""
-import sys
-from model_state import Base, State
 
-from sqlalchemy import (create_engine)
+""" blueprint of the model class """
 
-if __name__ == "__main__":
-    engine_link = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
-    Base.metadata.create_all(engine_link)
+from sqlalchemy import Column, Integer, String, MetaData
+from sqlalchemy.ext.declarative import declarative_base
+
+metadata_check = MetaData()
+Base = declarative_base(metadata=metadata_check)
+
+
+class State(Base):
+
+    """
+    attributes class in check
+    """
+
+    __tablename__ = 'states'
+    id = Column(Integer, unique=True, nullable=False, primary_key=True)
+    name = Column(String(128), nullable=False)
