@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Displays the X header
+"""shOWS INFORMATION REQUIRED TO DO WHATS ASKED 
 """
 import sys
 import urllib.request
@@ -8,7 +8,6 @@ import urllib.request
 if __name__ == "__main__":
     url = sys.argv[1]
 
-    request_open = urllib.request_open.Request(url)
-    with urllib.request_open.urlopen(request_open) as response:
-        print(dict(response_open.headers).get("X-Request-Id"))
-
+    request = urllib.request.Request(url)
+    with urllib.request.urlopen(request) as response:
+        print(dict(response.headers).get("X-Request-Id"))
