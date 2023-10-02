@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""Sends request info 
-"""
+"""Sends request info"""
 import sys
 import urllib.error
 import urllib.request

@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""A Post request is requested and filled for 
-"""
+"""A Post request is requested and filled for"""
 
 
 import sys

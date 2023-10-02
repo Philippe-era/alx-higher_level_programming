@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""shOWS INFORMATION REQUIRED TO DO WHATS ASKED 
-"""
+"""shOWS INFORMATION REQUIRED TO DO WHATS ASKED"""
 import sys
 import urllib.request
 
