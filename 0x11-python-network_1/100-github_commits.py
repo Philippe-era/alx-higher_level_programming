@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""Lists repo commits
-"""
+"""Lists repo commits"""
 import sys
 import requests
 
@@ -18,4 +17,3 @@ if __name__ == "__main__":
                 commits[initial].get("commit").get("author").get("name")))
     except IndexError:
         pass
-

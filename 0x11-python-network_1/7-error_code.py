@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""Handles Requests sent
-"""
+"""Handles Requests sent"""
 import sys
 import requests
 
@@ -13,4 +12,3 @@ if __name__ == "__main__":
         print("Error code: {}".format(read_info.status_code))
     else:
         print(read_info.text)
-

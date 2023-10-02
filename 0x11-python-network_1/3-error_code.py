@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Sends request info"""
+"""Sends request info """
 import sys
 import urllib.error
 import urllib.request
@@ -14,4 +14,3 @@ if __name__ == "__main__":
             print(response.read().decode("ascii"))
     except urllib.error.HTTPError as e:
         print("Error code: {}".format(e.code))
-

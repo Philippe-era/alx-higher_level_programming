@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""Post Request for the information
-"""
+"""Post Request for the information"""
 import sys
 import requests
 
@@ -11,4 +10,3 @@ if __name__ == "__main__":
 
     read_info = requests.post(url, data=value)
     print(read_info.text)
-
