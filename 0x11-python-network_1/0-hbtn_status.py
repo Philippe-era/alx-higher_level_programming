@@ -11,4 +11,3 @@ if __name__ == "__main__":
         print("\t- type: {}".format(type(body_fetch)))
         print("\t- content: {}".format(body_fetch))
         print("\t- utf8 content: {}".format(body_fetch.decode("utf-8")))
-
